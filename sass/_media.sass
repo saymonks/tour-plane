@@ -23,10 +23,27 @@
       width: 340px
 @media (max-width: 768px)
   .container
-    max-width: 576px
+    max-width: 700px
     width: 92%
+    &__line
+      width: 16px
+      height: 1px
+      background-color: $text-color
+@media (max-width: 768px)
   .navbar
-    &-menu, &__search, &__user
+    &-menu__link
+      font-size: 12px
+      line-height: 15px
+@media (max-width: 685px)
+  .search__input
+    width: 290px
+@media (max-width: 650px)
+  .search__input
+    display: none
+  .navbar
+    &__user
+      display: none
+    &-menu
       display: none
   .menu
     &-button
@@ -39,10 +56,13 @@
       padding: 0
       border: none
       cursor: pointer
+      background-color: #fff
       &__line
         width: 16px
         height: 1px
         background-color: $text-color
+
 @media (max-width: 576px)
   .logo
     width: 99px
+@media (max-width: 320px)
