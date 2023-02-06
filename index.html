@@ -126,28 +126,27 @@
         </div>
         <!-- /.hotel-info -->
         <div class="hotel-grid">
-          <div class="slider hotel__slider">
+
             <!-- Slider main container -->
-            <div class="swiper">
+            <div class="swiper hotel-slider hotel__slider">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide">
+                <div class="swiper-slide hotel-slider__item">
                   <img class="swiper-slide__image" src="image/slide.jpg" alt="" />
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide hotel-slider__item">
                   <img class="swiper-slide__image" src="image/slide.jpg" alt="" />
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide hotel-slider__item">
                   <img class="swiper-slide__image" src="image/slide.jpg" alt="" />
                 </div>
               </div>
               <!-- If we need navigation buttons -->
-              <button class="slider-button slider-button--prev"></button>
-              <button class="slider-button slider-button--next"></button>
+              <button class="hotel-slider__button hotel-slider__button--prev"></button>
+              <button class="hotel-slider__button hotel-slider__button--next"></button>
             </div>
-          </div>
-          <!-- /.slider -->
+          
           <div class="hotel-right">
                       <div class="booking">
             <div class="booking__info">
@@ -186,8 +185,10 @@
           <!-- /.map -->
           </div>
           <!-- /.hotel-right -->
-      </div>
+          </div>
       <!-- /.container -->
+        </div>
+        <!-- /.hotel-grid -->
     </section>
     <section class="newsletter">
       <div class="newsletter-wrapper">
@@ -206,7 +207,7 @@
       <!-- /.newsletter-wrapper -->
     </section>
     <section class="reviews">
-      <div class="contaiener">
+      <div class="container">
         <h2 class="section-title">What people think about us</h2>
         <div class="swiper reviews-slider">
          <div class="swiper-wrapper">
@@ -237,7 +238,7 @@
          </div>
          <!-- reviews-slider -->
       </div>
-      <!-- /.contaiener -->
+      <!-- /.container -->
     </section>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
