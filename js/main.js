@@ -17,12 +17,8 @@ const reviewsSlider = new Swiper('.reviews-slider', {
   loop: true,
   // Navigation arrows
   navigation: {
-    nextEl: 'swiper-button-prev',
-    prevEl: 'swiper-button-next',
-  },
-
-  keyboard: {
-    enabled: true,
+    nextEl: '.reviews-slider__button--next',
+    prevEl: '.reviews-slider__button--prev',
   },
 });
 
