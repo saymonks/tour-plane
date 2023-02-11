@@ -648,10 +648,6 @@ template {
 .newsletter {
   position: relative;
   padding: 98px 0px 87px 0px;
-  background-image: url(../image/newsletter-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 .newsletter:before {
   content: "";

@@ -22,6 +22,11 @@ const reviewsSlider = new Swiper('.reviews-slider', {
   },
 });
 
+$('.newsletter').parallax({
+  imageSrc: '/image/newsletter-bg.jpg',
+  speed: 0.5,
+});
+
 function init() {
   let map = new ymaps.Map('map-ya',{
    center: [52.846489046741844,-1.2974093359680516],
