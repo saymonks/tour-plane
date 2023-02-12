@@ -23,7 +23,7 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 });
 
 $('.newsletter').parallax({
-  imageSrc: '/image/newsletter-bg.jpg',
+  imageSrc: 'image/newsletter-bg.jpg',
   speed: 0.5,
 });
 
