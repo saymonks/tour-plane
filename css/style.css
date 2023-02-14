@@ -891,10 +891,23 @@ template {
 .packages-wrapper {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr 1fr;
+  gap: 30px;
+  padding: 0px 0px 70px 0px;
+}
+.packages__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0px 65px 0px;
 }
 .packages-card {
   display: flex;
-  border: solid 1px gray;
+  background-color: #0A223D;
+  color: #FFFFFF;
+  border-radius: 8px 8px 8px 8px;
+  overflow: hidden;
 }
 .packages-card__button {
   position: absolute;
@@ -915,14 +928,12 @@ template {
 .packages-card:first-child {
   grid-column: 1/3;
   position: relative;
-  border-radius: 8px 8px 8px 8px;
   overflow: hidden;
   background-color: #0A223D;
 }
 
 .haven {
   margin: 47px 0px 0px 44px;
-  color: #FFFFFF;
 }
 .haven__title {
   font-style: normal;
@@ -981,11 +992,79 @@ template {
   line-height: 30px;
 }
 .price__button {
-  padding: 11px 27px;
+  padding: 10px 26px;
+  margin: 18px 21px 0px 0px;
   border: none;
   border-radius: 4px;
   background-color: #EC1F46;
   color: #FFFFFF;
+  font-size: 14px;
+  line-height: 19px;
+  min-width: 120px;
+  height: 40px;
+}
+.price__button:nth-child(1) {
+  margin-right: 0px;
+}
+
+.parallel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.parallel__image {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 30px;
+}
+.parallel__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 9px;
+  border-radius: 0px 4px 4px 0px;
+  border: none;
+  background-color: #EC1F46;
+  color: #FFFFFF;
+  margin-top: 26px;
+  min-width: 60px;
+  font-size: 8px;
+  line-height: 10px;
+}
+.parallel__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0px 0px 23px 32px;
+}
+.parallel-information {
+  margin-left: 32px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 24px;
+}
+.parallel-information__text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+.parallel-information__text:nth-child(3) {
+  margin-bottom: 0px;
+}
+.parallel-information__icon {
+  margin-right: 18px;
+}
+.parallel .price {
+  margin-left: 32px;
+}
+.parallel__button {
+  margin-right: 21px;
 }
 
 @media (max-width: 1200px) {
