@@ -1,0 +1,99 @@
+.footer
+  background-color: $dark
+  color: $light
+  padding: 108px 0px 46px 0
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, minmax(min-content,1fr))
+    grid-gap: 20px
+    grid-auto-rows: minmax(40px,min-content)
+    align-items: start
+  &__logo
+    grid-row: 1/3
+    width: 166px
+    align-self: stretch
+  &__categories
+    grid-row: 1/4
+  &__social
+    &-links
+      display: flex
+      align-items: center
+      min-width: 83px
+      justify-content: space-between
+    &-network
+      grid-row: 2/4
+      grid-column: span 2
+      display: flex
+      align-content: center
+  &__contact
+    &-details
+      grid-column: span 2
+    &-form
+      grid-column: span 2
+  &__form
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+  &__ul
+    padding: 0
+    margin: 0
+    list-style: none
+  &__item
+    display: flex
+    align-items: flex-start
+    font-weight: 400
+    font-size: 14px
+    line-height: 160%
+    color: $footer-text
+    &--mb-2
+      margin-bottom: 20px
+  &__icon
+    &-wrapper
+      min-width: 40px
+  &__text
+    color: $footer-text
+    margin-bottom: 20px
+  &__link
+    text-decoration: none
+    color: inherit
+  &__title
+    font-style: normal
+    font-weight: 700
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    margin: 0px 0px 16px 0px
+    &--inline
+      margin: 0 43px 0px 0px
+    &--mb-3
+      margin-bottom: 30px
+  &__input
+    background-color: $light
+    border-radius: 4px
+    border: none
+    padding: 0px 23px
+    height: 50px
+    margin-bottom: 15px
+    flex-basis: 48%
+  &__message
+    background-color: $light
+    border-radius: 4px
+    padding: 18px 23px
+    border: none
+    flex-basis: 100%
+    margin-bottom: 23px
+  &__button
+    min-width: 160px
+    min-height: 50px
+    background-color: $primary
+    color: $light
+    border-radius: 4px
+    border: none
+    padding: 18px
+    font-size: 12px
+    line-height: 15px
+  &__info
+    font-size: 12px
+    line-height: 15px
+    color: $footer-text
