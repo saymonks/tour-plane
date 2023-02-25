@@ -10,13 +10,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="#" class="logo" data-aos="fade-right" data-aos-delay="100">
             <img
               src="image/horisontal-logo.svg"
               alt="Logo: Best Tour Plane"
@@ -27,6 +28,8 @@
           <form
             action="#"
             class="search navbar__search navbar__search--mobile_hidden"
+            data-aos="fade-right"
+            data-aos-delay="200"
           >
             <input
               type="text"
@@ -38,7 +41,12 @@
             </button>
           </form>
 
-          <a href="#" class="user navbar__user navbar__user--mobile_hidden">
+          <a
+            href="#"
+            class="user navbar__user navbar__user--mobile_hidden"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             <img
               src="image/avatar.jpg"
               alt="avatar: Nathan"
@@ -219,7 +227,9 @@
                 </a>
               </div>
               <!-- booking__call-center -->
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" class="button booking__button">
+                View Other Options
+              </button>
             </div>
             <!-- /.booking -->
             <div id="map-ya" class="map">
@@ -239,16 +249,31 @@
 
     <section class="newsletter">
       <div class="newsletter-wrapper">
-        <h2 class="newsletter-title newsletter__title">
+        <h2
+          class="newsletter-title newsletter__title"
+          data-aos="fade-right"
+          data-aos-offset="100"
+        >
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe">
-          <input
-            type="text"
-            class="subscribe__input"
-            placeholder="Your email address"
-          />
+        <form
+          action="telegram.php"
+          method="POST"
+          class="subscribe newsletter__subscribe form"
+          data-aos="fade-left"
+          data-aos-offset="100"
+        >
+          <div class="subscribe__input-group">
+            <input
+              type="email"
+              class="subscribe__input"
+              placeholder="Your email address"
+              name="email"
+              required
+            />
+          </div>
+          <!-- /.subcribe__input-group -->
           <button class="subscribe__button">Send</button>
         </form>
       </div>
@@ -345,7 +370,11 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="activities-card activities__card">
+          <div
+            class="activities-card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <img
               src="image/chamarel.jpg"
               alt="Image: Chamarel"
@@ -357,7 +386,11 @@
             <button class="activities-card__button">Book Now</button>
           </div>
           <!-- card -->
-          <div class="activities-card activities__card">
+          <div
+            class="activities-card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             <img
               src="image/golf.jpg"
               alt="Image: Golf"
@@ -367,7 +400,11 @@
             <button class="activities-card__button">Book Now</button>
           </div>
           <!-- card -->
-          <div class="activities-card activities__card">
+          <div
+            class="activities-card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="500"
+          >
             <img
               src="image/waterfall.jpg"
               alt="Image: Waterfall"
@@ -379,7 +416,11 @@
             <button class="activities-card__button">Book Now</button>
           </div>
           <!-- card -->
-          <div class="activities-card activities__card">
+          <div
+            class="activities-card activities__card"
+            data-aos="fade-right"
+            data-aos-delay="700"
+          >
             <img
               src="image/blue-marine.jpg"
               alt="Image: blue marine"
@@ -539,22 +580,31 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="#" class="footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-              />
+            <form action="telegram.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  required
+                />
+              </div>
+              <!-- /.footer__input-group -->
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="input footer__input"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                />
+              </div>
+              <!-- /.footer__input-group -->
               <textarea
-                class="footer__message"
-                cols="30"
-                rows="10"
+                class="message footer__message"
                 placeholder="Message"
+                name="message"
               ></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <div class="footer__info">* Required Fields</div>
@@ -566,10 +616,56 @@
       </div>
       <!-- /.container -->
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close"
+          ><img src="image/close.svg" alt="Icon: close"
+        /></a>
+        <h3 class="modal__title modal__title--mb-3">Booking</h3>
+        <form action="telegram.php" method="POST" class="modal__form form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            name="name"
+            required
+            minlength="2"
+          />
+          <input
+            type="tel"
+            class="input modal__input"
+            placeholder="Phone Number*"
+            name="phone"
+            required
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Your Email*"
+            name="email"
+            required
+          />
+          <textarea
+            class="message modal__message"
+            placeholder="Message"
+            name="message"
+          ></textarea>
+          <button class="button modal__button" type="submit">Send</button>
+          <div class="modal__info">* Required Fields</div>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

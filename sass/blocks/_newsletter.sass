@@ -32,9 +32,7 @@
 .subscribe
   min-width: 350px
   height: 55px
-  border-radius: 4px
   display: flex
-  overflow: hidden
   &__input
     min-width: 285px
     height: 100%
@@ -44,6 +42,11 @@
     font-weight: 300
     font-size: 14px
     line-height: 18px
+    border-radius: 4px 0px 0px 4px
+    &-group
+      display: flex
+      flex-wrap: wrap
+      max-width: 285px
   &__button
     height: 100%
     border: none
@@ -55,3 +58,5 @@
     align-items: center
     justify-content: center
     flex-wrap: wrap
+    cursor: pointer
+    border-radius: 0px 4px 4px 0px
